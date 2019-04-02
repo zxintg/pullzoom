@@ -12,10 +12,10 @@ buildscript {
 
 allprojects {
     repositories {
-	mavenCentral()
+	 mavenCentral()//如果 jcenter 很慢，尝试添加 mavenCentral 并调整到首行
         google()
         jcenter()
-	maven { url "https://jitpack.io" }
+		maven { url "https://jitpack.io" }
     }
 }
 
@@ -34,5 +34,16 @@ ext{
     targetSdkVersion = 28
     versionCode = 1
     versionName = "2.0.1"
+    supportVersion = "28.0.3"
+
+    renderscriptTargetApi = 19
+    renderscriptSupportModeEnabled = true
+
+    //library版本
+    jjdxm_minSdkVersion = 9
+    jjdxm_versionCode = 1
+    jjdxm_versionName = "1.0.0"
+    jjdxm_v4 = 'com.android.support:support-v4:23.3.0'
+    jjdxm_v7 = 'com.android.support:appcompat-v7:23.3.0'
 
 }
